@@ -1,0 +1,17 @@
+{
+  "production": {
+    "db": {
+      "username": "postgres",
+      "password": "postgres",
+      "database": "hedgedoc",
+      "host": "localhost",
+      "port": "5432",
+      "dialect": "postgres",
+      "storage": "./db.hedgedoc.postgres"
+   },
+    "urlAddPort": true,
+    "domain": "our-hedgedoc",
+    "port": 443,
+    "protocolUseSSL": true
+  }
+}
