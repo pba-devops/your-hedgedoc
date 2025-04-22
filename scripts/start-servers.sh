@@ -2,7 +2,7 @@
 
 #set -E
 
-DATABASE_LOCATION=/c/Users/baala_p/Documents/Hedgedoc/your-hedgedoc/hedgedoc-db
+DATABASE_LOCATION=$_TOOLS_LOCATION/your-hedgedoc/hedgedoc-db
 DATABASE_NOT_RUNNING="no server running"
 
 sleep 0
