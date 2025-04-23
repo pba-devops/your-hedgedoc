@@ -1,7 +1,5 @@
 #!/bin/sh
 
-(cd /var/lib/postgresql/12/ && tar zcvf /database-dir.tar.gz data)
-(cd /etc && tar zcvf /etc-postgresql-dir.tar.gz postgresql)
-(cd /hedgedoc/public/ && tar zcvf /uploads.tar.gz uploads)
-(cd /hedgedoc/public/ && tar zcvf /downloads.tar.gz downloads)
-(cd /hedgedoc/public/ && tar zcvf /sounds.tar.gz sounds)
+CURRENT_FOLDER=/c/Users/baala_p/Documents/Dev/Tools/your-hedgedoc/scripts
+
+(cd $CURRENT_FOLDER/.. && zip -re backup.zip hedgedoc-db hedgedoc/public/uploads && cp backup.zip /g/FIP_PAY/COMMUN/TO_PHILIPPE/ && echo "Backup done" || echo "Backup failed")

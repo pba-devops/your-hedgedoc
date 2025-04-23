@@ -2,7 +2,7 @@
 
 #set -E
 
-DATABASE_LOCATION=$_TOOLS_LOCATION/your-hedgedoc/hedgedoc-db
+DATABASE_LOCATION=/c/Users/baala_p/Documents/Dev/Tools/your-hedgedoc/hedgedoc-db
 DATABASE_NOT_RUNNING="no server running"
 
 sleep 0
@@ -47,8 +47,4 @@ export CMD_SESSION_SECRET=hedgedoc
 env | grep CMD_
 echo "NODE_ENV: $NODE_ENV"
 
-(cd ../hedgedoc && yarn start)
-
-sleep 0
-
-#pg_ctl -D "${DATABASE_LOCATION}" -l logfile stop
+(cd /c/Users/baala_p/Documents/Dev/Tools/your-hedgedoc/hedgedoc && yarn start)
