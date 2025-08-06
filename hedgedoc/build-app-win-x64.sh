@@ -1,13 +1,13 @@
 #!/bin/bash
 
-if [[ $OSTYPE != 'darwin'* ]]; then
-	echo "ONLY FROM MACOS"
+if [[ $OSTYPE != 'msys'* ]] && [[ $OSTYPE != 'cygwin'* ]]; then
+	echo "ONLY FROM WINDONS"
 	exit 1
 fi
 
 rm -rf node_modules 2>/dev/null
 
-ARCH=mac-x64
+ARCH=win-x64
 
 yarn install
 yarn build
@@ -27,6 +27,6 @@ nexe \
   --resource "./config.json" \
   --resource "./locales/**/*" \
   --resource "./bin**/*" \
-  --output hedgedoc/$ARCH/hedgedoc
+  --output hedgedoc/$ARCH/hedgedoc.exe
 
 rm -rf node_modules 2>/dev/null
