@@ -1,5 +1,8 @@
 #!/bin/bash
 
+yarn install
+yarn build
+
 mkdir hedgedoc 2>/dev/null
 cp -r public/ hedgedoc/
 
