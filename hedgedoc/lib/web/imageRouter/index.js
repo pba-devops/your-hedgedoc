@@ -18,7 +18,9 @@ const imageRouter = (module.exports = Router())
 async function checkUploadType (filePath) {
   const extension = path.extname(filePath).toLowerCase()
   const FileType = await import('file-type')
-  let typeFromMagic = await FileType.fileTypeFromFile(filePath)
+  const filePathBuffer = Buffer.from(filePath);
+  logger.info('-----> ' + filePathBuffer)
+  let typeFromMagic = await FileType.fileTypeFromFile(filePathBuffer)
   if (extension === '.svg' && (typeFromMagic === undefined || typeFromMagic.mime === 'application/xml')) {
     const fileContent = fs.readFileSync(filePath)
     if (isSvg(fileContent)) {
@@ -89,9 +91,9 @@ imageRouter.post('/uploadimage', function (req, res) {
       logger.error('Image upload error: Upload didn\'t contain file)')
       rimraf.sync(tmpDir)
       return errors.errorBadRequest(res)
-    } else if (!(await checkUploadType(files.image.filepath))) {
-      rimraf.sync(tmpDir)
-      return errors.errorBadRequest(res)
+//    } else if (!(await checkUploadType(files.image.filepath))) {
+//      rimraf.sync(tmpDir)
+//      return errors.errorBadRequest(res)
     } else {
       logger.debug(
         `SERVER received uploadimage: ${JSON.stringify(files.image)}`
@@ -102,7 +104,8 @@ imageRouter.post('/uploadimage', function (req, res) {
         `imageRouter: Uploading ${files.image.filepath} using ${config.imageUploadType}`
       )
       uploadProvider.uploadImage(files.image.filepath, function (err, url) {
-        rimraf.sync(tmpDir)
+        logger.info('________ tmpDir : ' + tmpDir);
+//        rimraf.sync(tmpDir)
         if (err !== null) {
           logger.error(err)
           return res.status(500).end('upload image error')

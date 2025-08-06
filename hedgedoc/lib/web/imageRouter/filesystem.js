@@ -7,6 +7,7 @@ const config = require('../../config')
 const logger = require('../../logger')
 
 exports.uploadImage = function (imagePath, callback) {
+
   if (!callback || typeof callback !== 'function') {
     logger.error('Callback has to be a function')
     return
