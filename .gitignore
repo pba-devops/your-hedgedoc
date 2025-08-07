@@ -3,3 +3,6 @@ hedgedoc-db/
 scripts/logfile
 scripts/nohup.out
 **/node_modules/
+hedgedoc/linux-x64/public/
+hedgedoc/mac-x64/public/
+hedgedoc/win-x64/public/
