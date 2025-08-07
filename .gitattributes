@@ -1,3 +1,6 @@
 hedgedoc/hedgedoc/linux-x64/hedgedoc filter=lfs diff=lfs merge=lfs -text
 hedgedoc/hedgedoc/mac-x64/hedgedoc filter=lfs diff=lfs merge=lfs -text
 hedgedoc/hedgedoc/win-x64/hedgedoc.exe filter=lfs diff=lfs merge=lfs -text
+hedgedoc/hedgedoc/linux-x64/node_modules.tar.gz filter=lfs diff=lfs merge=lfs -text
+hedgedoc/hedgedoc/mac-x64/node_modules.tar.gz filter=lfs diff=lfs merge=lfs -text
+hedgedoc/hedgedoc/win-x64/node_modules.tar.gz filter=lfs diff=lfs merge=lfs -text
