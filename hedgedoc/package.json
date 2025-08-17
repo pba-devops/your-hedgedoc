@@ -2,7 +2,7 @@
   "name": "HedgeDoc",
   "version": "1.10.3",
   "description": "The best platform to write and share markdown.",
-  "main": "app.js",
+  "main": "http://localhost:3000",
   "license": "AGPL-3.0",
   "scripts": {
     "test": "npm run-script eslint && npm run-script jsonlint && npm run-script mocha-suite",
