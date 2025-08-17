@@ -2,7 +2,6 @@ backup.zip
 hedgedoc-db/
 scripts/logfile
 scripts/nohup.out
-**/node_modules/
 hedgedoc/hedgedoc/linux-x64/public/
 hedgedoc/hedgedoc/mac-x64/public/
 hedgedoc/hedgedoc/win-x64/public/
