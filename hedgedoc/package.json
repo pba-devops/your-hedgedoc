@@ -3,6 +3,10 @@
   "version": "1.10.3",
   "description": "The best platform to write and share markdown.",
   "main": "http://localhost:3000",
+  "window": {
+    "title": "Hedgedoc",
+    "position":"center"
+  },
   "license": "AGPL-3.0",
   "scripts": {
     "test": "npm run-script eslint && npm run-script jsonlint && npm run-script mocha-suite",
@@ -14,7 +18,8 @@
     "dev": "webpack --config webpack.dev.js --progress --watch",
     "heroku-prebuild": "bin/heroku",
     "build": "webpack --config webpack.prod.js --progress",
-    "start": "node app.js"
+    "start": "node app.js",
+    "front":"nw"
   },
   "dependencies": {
     "@hedgedoc/meta-marked": "14.1.0",
